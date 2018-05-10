@@ -1,0 +1,44 @@
+name: BlastFishing
+main: com.jstnf.blastfishing.main.BlastFishing
+version: 1.5.6
+
+author: pokeball92870 / jstnf
+
+description: Simple and customizable blast fishing with TNT in Minecraft.
+
+commands:
+  blastfishing:
+    description: Command for the BlastFishing plugin.
+    usage: /blastfishing
+    aliases: bf
+    permission: blastfishing.blastfishing
+    permission-message: You do not have permission to use this command.
+    
+permissions:
+  blastfishing.*:
+    description: Gives access to all BlastFishing commands and perks.
+    children:
+      blastfishing.blastfishing: true
+      blastfishing.toggle: true
+      blastfishing.use: true
+      blastfishing.toggle.playercheck: true
+      blastfishing.toggle.permissioncheck: true
+      blastfishing.reload: true
+  blastfishing.blastfishing: 
+    description: Allows the use of the /blastfishing command.
+    default: true
+  blastfishing.use:
+    description: Allows blast fishing if permission check is enabled.
+    default: false
+  blastfishing.toggle:
+    description: Allows the user to toggle BlastFishing for the entire server.
+    default: false
+  blastfishing.toggle.playercheck:
+    description: Allows the user to toggle the player check for BlastFishing.
+    default: false
+  blastfishing.toggle.permissioncheck:
+    description: Allows the user to toggle the permission check for BlastFishing.
+    default: false
+  blastfishing.reload:
+    description: Allows the user to reload the BlastFishing configuration.
+    default: false
