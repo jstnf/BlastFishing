@@ -19,16 +19,16 @@ permissions:
   blastfishing.toggle.*:
     description: Allows the toggling of all BlastFishing options.
     children:
-      blastfishing.toggle: true
+      blastfishing.toggle.blastfishing: true
       blastfishing.toggle.playercheck: true
       blastfishing.toggle.permissioncheck: true
   blastfishing.admin:
     description: All admin permissions over BlastFishing
-    children: null
-    blastfishing.toggle.*: true
-    blastfishing.use: true
-    blastfishing.help: true
-    blastfishing.blastfishing: true
+    children:
+      blastfishing.toggle.*: true
+      blastfishing.use: true
+      blastfishing.help: true
+      blastfishing.blastfishing: true
   blastfishing.blastfishing:
     description: Allows the use of the /blastfishing command.
     default: true
@@ -38,7 +38,13 @@ permissions:
   blastfishing.help:
     description: Allows user to see command help for BlastFishing.
     default: false
-  blastfishing.toggle:
+  blastfishing.menu:
+    description: <add>
+    default: false
+  blastfishing.reload:
+    description: Allows the user to reload the BlastFishing configuration.
+    default: false
+  blastfishing.toggle.blastfishing:
     description: Allows the user to toggle BlastFishing for the entire server.
     default: false
   blastfishing.toggle.playercheck:
@@ -47,6 +53,21 @@ permissions:
   blastfishing.toggle.permissioncheck:
     description: Allows the user to toggle the permission check for BlastFishing.
     default: false
-  blastfishing.reload:
-    description: Allows the user to reload the BlastFishing configuration.
+  blastfishing.loottable.items:
+    description: <add>
+    default: false
+  blastfishing.loottable.list:
+    description: <add>
+    default: false
+  blastfishing.loottable.get:
+    description: <add>
+    default: false
+  blastfishing.loottable.add:
+    description: <add>
+    default: false
+  blastfishing.loottable.remove:
+    description: <add>
+    default: false
+  blastfishing.loottable.random:
+    description: <add>
     default: false

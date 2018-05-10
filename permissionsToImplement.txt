@@ -1,0 +1,23 @@
+blastfishing.admin
+blastfishing.*
+blastfishing.toggle.*
+blastfishing.loottable.*
+
+blastfishing.blastfishing - /bf or /blastfishing
+blastfishing.help - /bf help
+blastfishing.use - Allow use of BlastFishing (if permissioncheck is enabled)
+
+blastfishing.toggle.blastfishing - /bf toggle blastfishing
+blastfishing.toggle.permissioncheck - /bf toggle permissioncheck
+blastfishing.toggle.playercheck - /bf toggle playercheck
+
+blastfishing.menu - /bf menu (in-game GUI)
+
+blastfishing.loottable.items - /bf loottable items (in-game GUI)
+blastfishing.loottable.list - /bf loottable list
+blastfishing.loottable.get - /bf loottable get <index>
+blastfishing.loottable.add - /bf loottable add <weight>
+blastfishing.loottable.remove - /bf loottable remove <index>
+blastfishing.loottable.random - /bf loottable random
+
+blastfishing.reload - /bf reload

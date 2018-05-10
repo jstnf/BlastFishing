@@ -1,5 +1,6 @@
 package com.jstnf.blastfishing;
 
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
@@ -15,10 +16,19 @@ public class ExplosionListener implements Listener
 		this.plugin = bfp;
 	}
 
+	/**
+	 * Triggers on any entity explosion.
+	 * @param explosion
+	 */
 	@EventHandler
-	public void onExplosion(EntityExplodeEvent e)
+	public void onExplosion(EntityExplodeEvent explosion)
 	{
-		// hi!
+		Entity e = explosion.getEntity();
+		Location location = e.getLocation();
+		
+		if (conditionCheck(e, location)) {
+			
+		}
 	}
 
 	private boolean isWater(Material mat)
@@ -26,8 +36,11 @@ public class ExplosionListener implements Listener
 		return mat == Material.WATER || mat == Material.STATIONARY_WATER;
 	}
 
-	public boolean conditionCheck(Entity e)
+	public boolean conditionCheck(Entity e, Location l)
 	{
-		return true;
+		boolean isTNT = e instanceof org.bukkit.entity.TNTPrimed;
+		boolean submerged = isWater(l.getBlock().getRelative(org.bukkit.block.BlockFace.UP).getType());
+		
+		return isTNT && submerged;
 	}
 }
