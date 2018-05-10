@@ -18,7 +18,7 @@ public class ExplosionListener implements Listener
 	@EventHandler
 	public void onExplosion(EntityExplodeEvent e)
 	{
-
+		// hi!
 	}
 
 	private boolean isWater(Material mat)
