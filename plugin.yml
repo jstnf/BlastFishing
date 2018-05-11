@@ -16,58 +16,86 @@ permissions:
     children:
       blastfishing.admin: true
       blastfishing.reload: true
+      
   blastfishing.toggle.*:
     description: Allows the toggling of all BlastFishing options.
     children:
       blastfishing.toggle.blastfishing: true
       blastfishing.toggle.playercheck: true
       blastfishing.toggle.permissioncheck: true
+      
+  blastfishing.loottable.*:
+    description: Allows the user to test and modify the BlastFishing loot table.
+    children:
+      blastfishing.loottable.items: true
+      blastfishing.loottable.list: true
+      blastfishing.loottable.get: true
+      blastfishing.loottable.add: true
+      blastfishing.loottable.remove: true
+      blastfishing.loottable.random: true
+      
   blastfishing.admin:
-    description: All admin permissions over BlastFishing
+    description: All admin permissions over BlastFishing.
     children:
       blastfishing.toggle.*: true
+      blastfishing.loottable.*: true
       blastfishing.use: true
       blastfishing.help: true
       blastfishing.blastfishing: true
+      blastfishing.menu: true
+      
   blastfishing.blastfishing:
     description: Allows the use of the /blastfishing command.
     default: true
+    
   blastfishing.use:
-    description: Allows blast fishing if permission check is enabled.
+    description: Allows the user to blast fish if permission check is enabled.
     default: false
+    
   blastfishing.help:
-    description: Allows user to see command help for BlastFishing.
+    description: Allows the user to see command help for BlastFishing.
     default: false
+    
   blastfishing.menu:
-    description: <add>
+    description: Allows the user to use the BlastFishing GUI.
     default: false
+    
   blastfishing.reload:
     description: Allows the user to reload the BlastFishing configuration.
     default: false
+    
   blastfishing.toggle.blastfishing:
     description: Allows the user to toggle BlastFishing for the entire server.
     default: false
+    
   blastfishing.toggle.playercheck:
     description: Allows the user to toggle the player check for BlastFishing.
     default: false
+    
   blastfishing.toggle.permissioncheck:
     description: Allows the user to toggle the permission check for BlastFishing.
     default: false
+    
   blastfishing.loottable.items:
-    description: <add>
+    description: Allows the user to open a GUI that lists items in the loot table.
     default: false
+    
   blastfishing.loottable.list:
-    description: <add>
+    description: Allows the user to list the loot table items in chat.
     default: false
+    
   blastfishing.loottable.get:
-    description: <add>
+    description: Allows the user to spawn in items from the loot table.
     default: false
+    
   blastfishing.loottable.add:
-    description: <add>
+    description: Allows the user to add their held item to the loot table.
     default: false
+    
   blastfishing.loottable.remove:
-    description: <add>
+    description: Allows the user to remove items from the loot table.
     default: false
+    
   blastfishing.loottable.random:
-    description: <add>
+    description: Allows the user to randomly spawn in an item from the loot table (uses item weight).
     default: false
