@@ -21,6 +21,7 @@ public class BlastFishingPlugin extends JavaPlugin
 		loadConfig();
 		this.getLogger().info("Setting up explosion listener...");
 		getServer().getPluginManager().registerEvents(new ExplosionListener(this), this);
+		this.getCommand("blastfishing").setExecutor(new BlastFishingCommand(this));
 		this.getLogger().info("BlastFishing successfully enabled.");
 	}
 
@@ -35,20 +36,27 @@ public class BlastFishingPlugin extends JavaPlugin
 		configf = new File(getDataFolder(), "config.yml");
 		lootf = new File(getDataFolder(), "loot.yml");
 		langf = new File(getDataFolder(), "lang.yml");
-		if (!configf.exists())
+		try
 		{
-			configf.getParentFile().mkdirs();
-			saveResource("config.yml", false);
+			if (!configf.exists())
+			{
+				configf.mkdirs();
+				configf.createNewFile();
+			}
+			if (!lootf.exists())
+			{
+				lootf.mkdirs();
+				lootf.createNewFile();
+			}
+			if (!langf.exists())
+			{
+				langf.mkdirs();
+				langf.createNewFile();
+			}
 		}
-		if (!lootf.exists())
+		catch (Exception e)
 		{
-			lootf.getParentFile().mkdirs();
-			saveResource("loot.yml", false);
-		}
-		if (!langf.exists())
-		{
-			lootf.getParentFile().mkdirs();
-			saveResource("lang.yml", false);
+			e.printStackTrace();
 		}
 		config = new YamlConfiguration();
 		loot = new YamlConfiguration();
@@ -64,11 +72,6 @@ public class BlastFishingPlugin extends JavaPlugin
 			e.printStackTrace();
 		}
 	}
-	
-	private void loadConfig()
-	{
-		
-	}
 
 	public FileConfiguration getConfig()
 	{
@@ -83,5 +86,20 @@ public class BlastFishingPlugin extends JavaPlugin
 	public FileConfiguration getLootConfig()
 	{
 		return this.loot;
+	}
+
+	private void loadConfig()
+	{
+
+	}
+
+	private void loadLang()
+	{
+
+	}
+
+	private void loadLoot()
+	{
+
 	}
 }

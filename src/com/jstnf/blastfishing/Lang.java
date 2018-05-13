@@ -1,8 +1,11 @@
 package com.jstnf.blastfishing;
 
+import org.bukkit.ChatColor;
+import org.bukkit.configuration.file.YamlConfiguration;
+
 public enum Lang
 {
-	PREFIX("prefix", "&7[&cBlastFishing&7] &f"),
+	PREFIX("prefix", "&7[&cBlastFishing&7]&f"),
 	
 	ON_RELOAD("on-reload", "&fReloading BlastFishing..."),
 	RELOAD_SUCCESS("reload-success", "&fBlastFishing was successfully reloaded."),
@@ -32,24 +35,65 @@ public enum Lang
 	PLAYERCHECK_OFF("playercheck-off", "&fPlayer check is now &cDISABLED&f."),
 	
 	INVALID_SUBCOMMAND("invalid-subcommand", "&fInvalid command usage. Please use &6/bf help &ffor help."),
-	INVALID_TOGGLE_SUBCOMMAND("invalid-toggle-subcommand", "&fInvalid command usage. Please use &6/bf toggle help &ffor help."),
-	INVALID_LOOTTABLE_SUNCOMMAND("invalid-loottable-subcommand", "&fInvalid command usage. Please use &6/bf loottable help &ffor help.");
+	INVALID_TOGGLE_SUBCOMMAND("invalid-toggle-subcommand", "&fInvalid command usage. Please use &6/bf toggle help&f for help."),
+	INVALID_LOOTTABLE_SUNCOMMAND("invalid-loottable-subcommand", "&fInvalid command usage. Please use &6/bf loottable help&f for help.");
 
-	private String path, message;
+	private String path, def;
+	private static YamlConfiguration langFile;
 
+	/**
+	 * Lang enum constructor.
+	 * 
+	 * @param path Path in config file.
+	 * @param msg The default message.
+	 */
 	private Lang(String path, String msg)
 	{
 		this.path = path;
-		this.message = msg;
+		this.def = msg;
+	}
+	
+	/**
+	 * Set the {@code YamlConfiguration} to use.
+	 * 
+	 * @param file The lang file.
+	 */
+	public void setConfig(YamlConfiguration file)
+	{
+		this.langFile = file;
 	}
 
-	public String get()
+	@Override
+	public String toString()
 	{
-		String toReturn = this.message;
 		if (this == PREFIX)
 		{
-			toReturn += " ";
+			return ChatColor.translateAlternateColorCodes('&', langFile.getString(this.path, this.def)) + " ";
 		}
-		return toReturn;
+		return ChatColor.translateAlternateColorCodes('&', langFile.getString(this.path, this.def));
+	}
+
+	/**
+	 * Gets the default message of the path.
+	 * 
+	 * @return The default message.
+	 */
+	public String getDefault()
+	{
+		if (this == PREFIX)
+		{
+			return this.def + " ";
+		}
+		return this.def;
+	}
+	
+	/**
+	 * Gets the path to the String.
+	 * 
+	 * @return The path to the String.
+	 */
+	public String getPath()
+	{
+		return this.path;
 	}
 }
