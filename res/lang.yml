@@ -1,0 +1,39 @@
+# BlastFishing by jstnf
+# Language file
+#
+# You can use color codes.
+#
+# Have fun fishing! [TNT] <(^.^)> [TNT]
+
+prefix: "&c&lBlast&f&lFishing &7>>>"
+on-reload: "&fReloading BlastFishing..."
+reload-success: "&aBlastFishing was successfully reloaded."
+reload-failure: "&cBlastFishing could not reload. Please see the console for errors."
+use-no-permission: "&cYou do not have permission to blast fish."
+menu-no-permission: "&cYou do not have permission to use the options menu."
+reload-no-permission: "&cYou do not have permission to reload BlastFishing."
+help-no-permission: "&cYou do not have permission to see command help."
+toggle-help-no-permission: "&cYou do not have permission to see command help."
+loottable-help-no-permission: "&cYou do not have permission to see command help."
+bftoggle-no-permission: "&cYou do not have permission to toggle BlastFishing."
+permissioncheck-no-permission: "&cYou do not have permission to toggle the permission check."
+playercheck-no-permission: "&cYou do not have permission to toggle the player check."
+loottable-items-no-permission: "&cYou do not have permission to view the loot table."
+loottable-list-no-permission: "&cYou do not have permission to list the loot table."
+loottable-get-no-permission: "&cYou do not have permission to get items from the loot table."
+loottable-add-no-permission: "&cYou do not have permission to add items to the loot table."
+loottable-remove-no-permission: "&cYou do not have permission to remove items from the loot table."
+loottable-random-no-permission: "&cYou do not have permission to spawn items from the loot table."
+bftoggle-on: "&fBlastFishing is now &aENABLED&f."
+bftoggle-off: "&fBlastFishing is now &cDISABLED&f."
+permissioncheck-on: "&fPermission check is now &aENABLED&f. Players will need the &6blastfishing.use&f permission in order to use BlastFishing."
+permissioncheck-off: "&fPermission check is now &cDISABLED&f. All players can use BlastFishing."
+playercheck-on: "&fPlayer check is now &aENABLED&f. Items will only drop if a player detonates the TNT."
+playercheck-off: "&fPlayer check is now &cDISABLED&f. Items will drop regardless if a player detonates the TNT."
+invalid-subcommand: "&fInvalid command usage. Please use &6/bf help &ffor help."
+invalid-toggle-subcommand: "&fInvalid command usage. Please use &6/bf toggle help&f for help."
+invalid-loottable-subcommand: "&fInvalid command usage. Please use &6/bf loottable help&f for help."
+invalid-help-subcommand: "&cUsage: /bf help 1-3"
+
+# Do not modify this value!
+config-version: 1

@@ -1,6 +1,6 @@
 name: BlastFishing
 main: com.jstnf.blastfishing.BlastFishingPlugin
-version: 2.0.0
+version: 2.0.0dev
 author: pokeball92870 / jstnf
 description: Simple and customizable blast fishing with TNT in Minecraft.
 commands:
@@ -20,6 +20,7 @@ permissions:
   blastfishing.toggle.*:
     description: Allows the toggling of all BlastFishing options.
     children:
+      blastfishing.toggle.help: true
       blastfishing.toggle.blastfishing: true
       blastfishing.toggle.playercheck: true
       blastfishing.toggle.permissioncheck: true
@@ -27,6 +28,7 @@ permissions:
   blastfishing.loottable.*:
     description: Allows the user to test and modify the BlastFishing loot table.
     children:
+      blastfishing.loottable.help: true
       blastfishing.loottable.items: true
       blastfishing.loottable.list: true
       blastfishing.loottable.get: true
@@ -64,8 +66,12 @@ permissions:
     description: Allows the user to reload the BlastFishing configuration.
     default: false
     
+  blastfishing.toggle.help:
+    description: Allows the user to see toggle command help.
+    default: false
+    
   blastfishing.toggle.blastfishing:
-    description: Allows the user to toggle BlastFishing for the entire server.
+    description: Allows the user to toggle blast fishing for the entire server.
     default: false
     
   blastfishing.toggle.playercheck:
@@ -74,6 +80,10 @@ permissions:
     
   blastfishing.toggle.permissioncheck:
     description: Allows the user to toggle the permission check for BlastFishing.
+    default: false
+    
+  blastfishing.loottable.help:
+    description: Allows the user to see loot table command help.
     default: false
     
   blastfishing.loottable.items:

@@ -1,0 +1,49 @@
+# BlastFishing by jstnf
+# Configuration file
+#
+# Have fun fishing! [TNT] <(^.^)> [TNT]
+
+#################################################
+#                    OPTIONS                    #
+#################################################
+
+# Will BlastFishing be enabled on the server?
+enabled-on-server: true
+# BlastFishing will continue to run in the background, but
+# the check for underwater explosions will be cancelled.
+
+# Should BlastFishing check if a player detonated the TNT?
+player-check: false
+# If true, fish will only spawn if a player detonates the
+# TNT, whether it be through flint and steel, etc.
+
+# Should BlastFishing check if a player has permission?
+permission-check: false
+# If true, players will need the blastfishing.use
+# permission in order for BlastFishing to work.
+
+# Should changes to these values in-game be written to this file?
+push-to-config: true
+# If true, toggling any options for BlastFishing will
+# write changes from in-game commands to this config.
+
+#################################################
+#                    FISHING                    #
+#################################################
+
+# How far should BlastFishing check around the explosion for water blocks?
+blast-radius: 2
+# This means that BlastFishing will check for x connecting
+# water blocks in all directions (forms a cube).
+
+# Per each water block checked, what is the percent chance a fish will be spawned?
+chance-per-block: 30
+# If this value is 30, then each block checked will have a 30%
+# chance to spawn in a fish.
+
+#################################################
+#                     EXTRA                     #
+#################################################
+
+# Do not modify this value!
+config-version: 1
