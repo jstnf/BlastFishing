@@ -34,6 +34,7 @@ invalid-subcommand: "&fInvalid command usage. Please use &6/bf help &ffor help."
 invalid-toggle-subcommand: "&fInvalid command usage. Please use &6/bf toggle help&f for help."
 invalid-loottable-subcommand: "&fInvalid command usage. Please use &6/bf loottable help&f for help."
 invalid-help-subcommand: "&cUsage: /bf help 1-3"
+must-be-player: "&cYou must be a player to execute this command!"
 
 # Do not modify this value!
 config-version: 1

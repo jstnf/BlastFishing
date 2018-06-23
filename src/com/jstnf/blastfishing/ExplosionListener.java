@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityExplodeEvent;
 
+import com.jstnf.blastfishing.lang.Lang;
+
 public class ExplosionListener implements Listener
 {
 	private BlastFishingPlugin plugin;
@@ -47,7 +49,7 @@ public class ExplosionListener implements Listener
 				}
 			}
 			
-			// actual event here!
+			// *****actual event here!*****
 		}
 	}
 

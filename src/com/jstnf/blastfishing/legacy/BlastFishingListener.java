@@ -14,7 +14,6 @@ import org.bukkit.util.Vector;
 
 public class BlastFishingListener implements Listener
 {
-
 	private BlastFishing bf;
 	private Random rand;
 

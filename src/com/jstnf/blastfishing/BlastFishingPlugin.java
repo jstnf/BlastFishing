@@ -9,6 +9,8 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.jstnf.blastfishing.lang.Lang;
+
 public class BlastFishingPlugin extends JavaPlugin
 {
 	private File configf, lootf, langf;

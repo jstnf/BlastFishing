@@ -1,4 +1,4 @@
-package com.jstnf.blastfishing;
+package com.jstnf.blastfishing.lang;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -39,7 +39,9 @@ public enum Lang
 	INVALID_SUBCOMMAND("invalid-subcommand", "&fInvalid command usage. Please use &6/bf help &ffor help."),
 	INVALID_TOGGLE_SUBCOMMAND("invalid-toggle-subcommand", "&fInvalid command usage. Please use &6/bf toggle help&f for help."),
 	INVALID_LOOTTABLE_SUBCOMMAND("invalid-loottable-subcommand", "&fInvalid command usage. Please use &6/bf loottable help&f for help."),
-	INVALID_HELP_SUBCOMMAND("invalid-help-subcommand", "&cUsage: /bf help 1-3");
+	INVALID_HELP_SUBCOMMAND("invalid-help-subcommand", "&cUsage: /bf help 1-3"),
+	
+	MUST_BE_PLAYER("must-be-player", "&cYou must be a player to execute this command!");
 
 	private String path, def;
 	private static YamlConfiguration langFile;

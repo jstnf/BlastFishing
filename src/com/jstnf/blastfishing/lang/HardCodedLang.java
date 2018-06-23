@@ -1,4 +1,4 @@
-package com.jstnf.blastfishing;
+package com.jstnf.blastfishing.lang;
 
 import org.bukkit.ChatColor;
 

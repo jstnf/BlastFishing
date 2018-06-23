@@ -10,6 +10,7 @@ blastfishing.use - Allow use of BlastFishing (if permissioncheck is enabled)
 blastfishing.toggle.blastfishing - /bf toggle blastfishing
 blastfishing.toggle.permissioncheck - /bf toggle permissioncheck
 blastfishing.toggle.playercheck - /bf toggle playercheck
+blastfishing.toggle.help - /bf toggle help
 
 blastfishing.menu - /bf menu (in-game GUI)
 
