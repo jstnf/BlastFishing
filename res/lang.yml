@@ -35,6 +35,21 @@ invalid-toggle-subcommand: "&fInvalid command usage. Please use &6/bf toggle hel
 invalid-loottable-subcommand: "&fInvalid command usage. Please use &6/bf loottable help&f for help."
 invalid-help-subcommand: "&cUsage: /bf help 1-3"
 must-be-player: "&cYou must be a player to execute this command!"
+too-many-arguments: "&cYou inserted too many arguments!"
+invalid-loottable-add-subcommand: "&cUsage: /bf loottable add <weight>"
+loottable-add-no-item: "&cYou must be holding an item to add to the loot table."
+loottable-add-invalid-item: "&cThe item you tried to add was invalid."
+loottable-add-no-weight: "&cYou must specify a weight."
+loottable-add-invalid-weight: "&cThe weight you entered was invalid. Valid weights include integers greater than 0."
+loottable-add-success: "&aThe item was successfully added."
+loottable-add-failure: "&cThere was an error adding the item."
+loottable-remove-success: "&aThe item was successfully removed."
+loottable-remove-failure: "&cThere was an error removing the item."
+loottable-give-failure-empty: "&cThe loot table is empty."
+loottable-give-failure-invfull: "&cYour inventory is full."
+loottable-give-failure: "&cThere was an error giving you an item."
+loottable-give-random-success: "&aGiven a random item from the loot table based on item weight."
+loottable-give-success: "&aGiven item &e%i% &ain the loot table."
 
 # Do not modify this value!
 config-version: 1

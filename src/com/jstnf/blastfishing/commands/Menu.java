@@ -15,8 +15,12 @@ public class Menu implements SubCommand
 		{
 			if (sender.hasPermission(permission()))
 			{
-				// ADD THINGS HERE!
-				sender.sendMessage("To implement!");
+				/**
+				 *  ***************
+				 *  *  ADD THIS!  *
+				 *  ***************
+				 */
+				MessageManager.sendWithPrefix(sender, Lang.TO_IMPLEMENT);
 			}
 			else
 			{

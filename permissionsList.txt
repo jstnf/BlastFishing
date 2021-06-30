@@ -20,5 +20,6 @@ blastfishing.loottable.get - /bf loottable get <index>
 blastfishing.loottable.add - /bf loottable add <weight>
 blastfishing.loottable.remove - /bf loottable remove <index>
 blastfishing.loottable.random - /bf loottable random
+blastfishing.loottable.help - /bf loottable help
 
 blastfishing.reload - /bf reload

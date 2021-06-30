@@ -12,7 +12,12 @@ public class Reload implements SubCommand
 	{
 		if (sender.hasPermission(permission()))
 		{
-			// ADD THINGS HERE!
+			/**
+			 *  ***************
+			 *  *  ADD THIS!  *
+			 *  ***************
+			 */
+			MessageManager.sendWithPrefix(sender, Lang.TO_IMPLEMENT);
 			MessageManager.sendWithPrefix(sender, Lang.ON_RELOAD);
 			MessageManager.sendWithPrefix(sender, Lang.RELOAD_SUCCESS);
 			MessageManager.sendWithPrefix(sender, Lang.RELOAD_FAILURE);

@@ -142,6 +142,7 @@ public class BlastFishing extends JavaPlugin {
 		return res;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	private LootHandler initLootTable() {
 		LootHandler table = new LootHandler();
 		Iterator it = lootTable.entrySet().iterator();

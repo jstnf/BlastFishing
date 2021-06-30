@@ -27,19 +27,8 @@ public class BlastFishingCommand implements CommandExecutor
 	public BlastFishingCommand(BlastFishingPlugin bfp)
 	{
 		this.plugin = bfp;
-		commands = new HashMap<String,SubCommand>();
+		commands = new HashMap<String, SubCommand>();
 		loadCommands();
-	}
-
-	private void loadCommands()
-	{
-		Toggle toggleSub = new Toggle();
-		toggleSub.setup(this.plugin);
-		commands.put("toggle", toggleSub);
-		commands.put("options", new Menu());
-		commands.put("loottable", new LootTable());
-		commands.put("test", new Test());
-		commands.put("reload", new Reload());
 	}
 
 	@Override
@@ -52,9 +41,9 @@ public class BlastFishingCommand implements CommandExecutor
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&', HardCodedLang.CREDITS.toString()));
 			return true;
 		}
-		
+
 		int numArgs = args.length;
-		
+
 		if (numArgs > 0)
 		{
 			if (args[0].equalsIgnoreCase("help")) // bf help ...
@@ -83,19 +72,19 @@ public class BlastFishingCommand implements CommandExecutor
 				}
 				return true;
 			}
-			
+
 			String sub = args[0];
 			Vector<String> l = new Vector<String>();
 			l.addAll(Arrays.asList(args));
 			l.remove(0);
 			args = (String[]) l.toArray(new String[0]);
-			
+
 			if (!commands.containsKey(sub)) // invalid subcommand
 			{
 				MessageManager.sendWithPrefix(sender, Lang.INVALID_SUBCOMMAND);
 				return true;
 			}
-			
+
 			try
 			{
 				commands.get(sub).onCommand(sender, args);
@@ -108,5 +97,14 @@ public class BlastFishingCommand implements CommandExecutor
 			}
 		}
 		return true;
+	}
+
+	private void loadCommands()
+	{
+		commands.put("toggle", new Toggle(this.plugin));
+		commands.put("menu", new Menu());
+		commands.put("loottable", new LootTable(this.plugin));
+		commands.put("test", new Test());
+		commands.put("reload", new Reload());
 	}
 }

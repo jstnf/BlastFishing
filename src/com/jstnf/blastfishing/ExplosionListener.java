@@ -50,6 +50,11 @@ public class ExplosionListener implements Listener
 			}
 			
 			// *****actual event here!*****
+			/**
+			 *  ***************
+			 *  *  ADD THIS!  *
+			 *  ***************
+			 */
 		}
 	}
 

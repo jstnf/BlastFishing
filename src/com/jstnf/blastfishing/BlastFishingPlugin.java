@@ -10,27 +10,32 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.jstnf.blastfishing.lang.Lang;
+import com.jstnf.blastfishing.loottable.LootTableManager;
 
 public class BlastFishingPlugin extends JavaPlugin
 {
 	private File configf, lootf, langf;
 	private FileConfiguration config, loot, lang;
+	private LootTableManager lootMan;
 	public PluginDescriptionFile pdf;
 	
 	// config.yml defaults
 	public boolean isToggled = true, playerCheck = false, permissionCheck = false, pushToConfig = true;
 	public int spawnChancePerBlock = 30, radiusCheck = 2;
 	
-	private final int CONFIG_VERSION = 1;
+	// private final int CONFIG_VERSION = 1;
 
 	@Override
 	public void onEnable()
 	{
 		this.pdf = this.getDescription();
-		this.getLogger().info("Initializing configs...");
+		this.getLogger().info("Initializing config...");
 		createConfig();
 		loadConfig();
+		this.getLogger().info("Initializing language file...");
 		loadLang();
+		this.getLogger().info("Setting up loot table...");
+		lootMan = new LootTableManager();
 		loadLoot();
 		this.getLogger().info("Setting up explosion listener...");
 		this.getServer().getPluginManager().registerEvents(new ExplosionListener(this), this);
@@ -104,7 +109,6 @@ public class BlastFishingPlugin extends JavaPlugin
 		pushToConfig = this.getConfig().getBoolean("push-to-config");
 		radiusCheck = this.getConfig().getInt("blast-radius");
 		spawnChancePerBlock = this.getConfig().getInt("chance-per-block");
-		this.saveConfig();
 	}
 
 	private void loadLang()
@@ -122,7 +126,11 @@ public class BlastFishingPlugin extends JavaPlugin
 
 	private void loadLoot()
 	{
-
+		/**
+		 *  ***************
+		 *  *  ADD THIS!  *
+		 *  ***************
+		 */
 	}
 	
 	public boolean toggleBF()
@@ -141,5 +149,10 @@ public class BlastFishingPlugin extends JavaPlugin
 	{
 		this.permissionCheck = !this.permissionCheck;
 		return this.permissionCheck;
+	}
+	
+	public LootTableManager getLootMan()
+	{
+		return this.lootMan;
 	}
 }

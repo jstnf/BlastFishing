@@ -41,8 +41,26 @@ public enum Lang
 	INVALID_LOOTTABLE_SUBCOMMAND("invalid-loottable-subcommand", "&fInvalid command usage. Please use &6/bf loottable help&f for help."),
 	INVALID_HELP_SUBCOMMAND("invalid-help-subcommand", "&cUsage: /bf help 1-3"),
 	
-	MUST_BE_PLAYER("must-be-player", "&cYou must be a player to execute this command!");
+	MUST_BE_PLAYER("must-be-player", "&cYou must be a player to execute this command!"),
+	TOO_MANY_ARGUMENTS("too-many-arguments", "&cYou inserted too many arguments!"),
+	
+	INVALID_LOOTTABLE_ADD_SUBCOMMAND("invalid-loottable-add-subcommand", "&cUsage: /bf loottable add <weight>"),
+	LOOTTABLE_ADD_NO_ITEM("loottable-add-no-item", "&cYou must be holding an item to add to the loot table."),
+	LOOTTABLE_ADD_INVALID_ITEM("loottable-add-invalid-item", "&cThe item you tried to add was invalid."),
+	LOOTTABLE_ADD_NO_WEIGHT("loottable-add-no-weight", "&cYou must specify a weight."),
+	LOOTTABLE_ADD_INVALID_WEIGHT("loottable-add-invalid-weight", "&cThe weight you entered was invalid. Valid weights include integers greater than 0."),
+	LOOTTABLE_ADD_SUCCESS("loottable-add-success", "&aThe item was successfully added."),
+	LOOTTABLE_ADD_FAILURE("loottable-add-failure", "&cThere was an error adding the item."),
+	LOOTTABLE_REMOVE_SUCCESS("loottable-remove-success", "&aThe item was successfully removed."),
+	LOOTTABLE_REMOVE_FAILURE("loottable-remove-failure", "&cThere was an error removing the item."),
+	LOOTTABLE_GIVE_FAILURE_EMPTY("loottable-give-failure-empty", "&cThe loot table is empty."),
+	LOOTTABLE_GIVE_FAILURE_INVFULL("loottable-give-failure-invfull", "&cYour inventory is full."),
+	LOOTTABLE_GIVE_FAILURE("loottable-give-failure", "&cThere was an error giving you an item."),
+	LOOTTABLE_GIVE_RANDOM_SUCCESS("loottable-give-random-success", "&aGiven a random item from the loot table based on item weight."),
+	LOOTTABLE_GIVE_SUCCESS("loottable-give-success", "&aGiven item %i% in the loot table."),
 
+	TO_IMPLEMENT("to-implement", "&fTo implement!");
+	
 	private String path, def;
 	private static YamlConfiguration langFile;
 
